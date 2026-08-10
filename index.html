@@ -10,10 +10,18 @@
             document.documentElement.setAttribute('lang', 'en')
             document.documentElement.setAttribute('dir', 'ltr')
           }
+          var theme = localStorage.getItem('abeer-theme')
+          if (theme !== 'light' && theme !== 'dark') {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light'
+          }
+          document.documentElement.setAttribute('data-theme', theme)
         } catch (e) {}
       })()
     </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta id="theme-color-meta" name="theme-color" content="#E8EEF8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"

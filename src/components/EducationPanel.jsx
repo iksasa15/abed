@@ -25,9 +25,9 @@ export default function EducationPanel() {
             {item.logo ? (
               <img
                 src={item.logo}
-                alt="Apple Developer Academy"
+                alt="Apple Developer Academy at Tuwaiq"
                 className="academy-logo academy-logo--edu"
-                width={42}
+                width={72}
                 height={42}
               />
             ) : (

@@ -25,10 +25,10 @@ export default function SkillsPanel() {
             {tech.logo ? (
               <img
                 src={tech.logo}
-                alt="Apple Developer Academy"
+                alt="Apple Developer Academy at Tuwaiq"
                 className="academy-logo academy-logo--tech"
-                width={36}
-                height={36}
+                width={72}
+                height={28}
               />
             ) : (
               <TechIcon name={tech.name} className="tech-logo-card__icon" />

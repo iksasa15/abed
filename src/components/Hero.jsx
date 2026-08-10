@@ -33,10 +33,10 @@ export default function Hero({ onExplore }) {
               {stat.logo ? (
                 <img
                   src={stat.logo}
-                  alt="Apple Developer Academy"
+                  alt="Apple Developer Academy at Tuwaiq"
                   className="academy-logo academy-logo--stat"
-                  width={44}
-                  height={44}
+                  width={118}
+                  height={36}
                 />
               ) : (
                 <strong className="ltr">{stat.value}</strong>
