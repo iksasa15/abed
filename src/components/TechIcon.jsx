@@ -119,8 +119,6 @@ export const featuredTech = [
   { label: 'Python', name: 'Python' },
   { label: 'MongoDB', name: 'MongoDB' },
   { label: 'Figma', name: 'Figma' },
-  { label: 'AI', name: 'AI' },
-  { label: 'UX/UI', name: 'UX/UI' },
   {
     label: 'Academy',
     name: 'Apple Academy',

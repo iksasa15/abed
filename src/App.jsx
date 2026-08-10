@@ -29,11 +29,8 @@ function App() {
       />
 
       <div className="wallpaper" aria-hidden="true">
-        <span className="blob blob--pink" />
         <span className="blob blob--purple" />
         <span className="blob blob--sky" />
-        <span className="blob blob--navy" />
-        <span className="mesh" />
       </div>
 
       <header className="topbar glass">
@@ -57,13 +54,6 @@ function App() {
             aria-label={locale === 'ar' ? 'Switch to English' : 'التبديل للعربية'}
           >
             {t.langBtn}
-          </button>
-          <button
-            type="button"
-            className="glass-btn nav-works"
-            onClick={() => scrollTo('projects')}
-          >
-            {t.navWorks}
           </button>
           <a className="glass-btn glass-btn--tint" href="#contact">
             {t.navContact}

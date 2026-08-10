@@ -19,19 +19,18 @@ export default function ProjectsPanel() {
             key={project.id}
             year={project.year}
             accent={project.color}
-            delay={Math.min(i * 0.08, 0.3)}
+            edged
+            delay={Math.min(i * 0.06, 0.24)}
           >
-            <div className={`project project--flat project--${project.color}`}>
-              <span className="project__status">{project.status}</span>
-              <h3 className="project__name ltr">{project.name}</h3>
-              <p className="project__tagline">{project.tagline}</p>
-              <p className="project__desc">{project.description}</p>
-              <ul className="project__skills">
-                {project.skills.map((skill) => (
-                  <TechChip key={skill} label={skill} className="ltr" />
-                ))}
-              </ul>
-            </div>
+            <span className="project__status">{project.status}</span>
+            <h3 className="project__name ltr">{project.name}</h3>
+            <p className="project__tagline">{project.tagline}</p>
+            <p className="project__desc">{project.description}</p>
+            <ul className="project__skills">
+              {project.skills.map((skill) => (
+                <TechChip key={skill} label={skill} className="ltr" />
+              ))}
+            </ul>
           </TimelineItem>
         ))}
       </Timeline>

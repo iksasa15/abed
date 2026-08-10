@@ -9,10 +9,10 @@ export default function Contact() {
     <section className="contact" id="contact">
       <motion.div
         className="contact__card"
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       >
         <header className="section-head section-head--center">
           <p className="section-kicker">{contact.kicker}</p>

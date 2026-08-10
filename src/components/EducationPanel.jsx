@@ -17,10 +17,18 @@ export default function EducationPanel() {
           <TimelineItem
             key={item.title}
             year={item.year}
-            logo={item.logo}
-            accent={item.accent || (i % 2 === 0 ? 'purple' : 'sky')}
-            delay={Math.min(i * 0.05, 0.28)}
+            accent="purple"
+            delay={Math.min(i * 0.04, 0.24)}
           >
+            {item.logo ? (
+              <img
+                src={item.logo}
+                alt="Apple Developer Academy at Tuwaiq"
+                className="academy-logo academy-logo--card"
+                width={96}
+                height={36}
+              />
+            ) : null}
             <p className="timeline__meta">{item.meta}</p>
             <h3 className="timeline__title">{item.title}</h3>
             <p className="timeline__org">{item.org}</p>
@@ -42,8 +50,8 @@ export default function EducationPanel() {
             <TimelineItem
               key={act.title}
               year={act.year}
-              accent="pink"
-              delay={Math.min(i * 0.05, 0.2)}
+              accent="purple"
+              delay={Math.min(i * 0.04, 0.16)}
             >
               <h3 className="timeline__title">{act.title}</h3>
               <p className="timeline__org">

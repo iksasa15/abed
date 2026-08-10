@@ -41,107 +41,88 @@
 :root,
 [data-theme='light'] {
   --pink: #ff5a9a;
-  --pink-soft: #ff8fbc;
   --navy: #0a1a33;
-  --navy-soft: #2a4f86;
-  --purple: #7a5cff;
-  --purple-soft: #a994ff;
-  --sky: #4ec4f0;
-  --sky-soft: #8ad9f7;
+  --purple: #6e56cf;
+  --sky: #32ade6;
 
-  --bg: #e8eef8;
-  --bg-deep: #d5e0f0;
-  --wallpaper-top: #f7fbff;
-  --wallpaper-mid: #e8eef8;
-  --wallpaper-bottom: #d5e0f0;
+  --bg: #f5f6f8;
+  --wallpaper-top: #fafbfd;
+  --wallpaper-mid: #f5f6f8;
+  --wallpaper-bottom: #eef0f4;
 
-  --ink: #0c1222;
-  --ink-soft: rgba(12, 18, 34, 0.72);
-  --muted: rgba(12, 18, 34, 0.55);
-  --label: rgba(12, 18, 34, 0.92);
+  --ink: #1d1d1f;
+  --ink-soft: rgba(29, 29, 31, 0.72);
+  --muted: rgba(29, 29, 31, 0.48);
+  --label: #1d1d1f;
 
-  --surface: rgba(255, 255, 255, 0.52);
-  --surface-strong: rgba(255, 255, 255, 0.68);
-  --surface-soft: rgba(255, 255, 255, 0.32);
-  --surface-chip: rgba(255, 255, 255, 0.45);
-  --line: rgba(255, 255, 255, 0.55);
-  --line-soft: rgba(12, 18, 34, 0.08);
+  --surface: #ffffff;
+  --surface-soft: rgba(255, 255, 255, 0.72);
+  --surface-chip: rgba(0, 0, 0, 0.04);
+  --line: rgba(0, 0, 0, 0.08);
+  --line-soft: rgba(0, 0, 0, 0.06);
 
-  --glass: rgba(255, 255, 255, 0.42);
+  --glass: rgba(255, 255, 255, 0.72);
   --glass-border: rgba(255, 255, 255, 0.55);
-  --glass-edge: rgba(255, 255, 255, 0.9);
-  --glass-highlight: rgba(255, 255, 255, 0.7);
-  --glass-shadow: 0 12px 40px rgba(10, 26, 51, 0.1),
-    0 2px 8px rgba(10, 26, 51, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.12);
+  --glass-edge: rgba(255, 255, 255, 0.95);
+  --glass-highlight: rgba(255, 255, 255, 0.85);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 
-  --btn-ghost-bg: rgba(255, 255, 255, 0.42);
-  --logo-plate: #0a0a0c;
-  --mesh-a: rgba(255, 255, 255, 0.55);
-  --mesh-b: rgba(255, 255, 255, 0.35);
-  --blob-opacity: 0.55;
+  --btn-ghost-bg: rgba(255, 255, 255, 0.55);
+  --panel-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+  --blob-opacity: 0.18;
 
   color-scheme: light;
 }
 
 [data-theme='dark'] {
   --pink: #ff7eb0;
-  --pink-soft: #ffb0cf;
-  --navy: #dce6f7;
-  --navy-soft: #9db0d0;
-  --purple: #a994ff;
-  --purple-soft: #c9bcff;
-  --sky: #6fd4f7;
-  --sky-soft: #a8e5fb;
+  --navy: #e8eef8;
+  --purple: #a78bfa;
+  --sky: #64d2ff;
 
-  --bg: #0b1020;
-  --bg-deep: #070b16;
-  --wallpaper-top: #121933;
-  --wallpaper-mid: #0b1020;
-  --wallpaper-bottom: #070b16;
+  --bg: #000000;
+  --wallpaper-top: #0c0c0e;
+  --wallpaper-mid: #000000;
+  --wallpaper-bottom: #000000;
 
-  --ink: #f2f5ff;
-  --ink-soft: rgba(242, 245, 255, 0.78);
-  --muted: rgba(242, 245, 255, 0.58);
-  --label: rgba(242, 245, 255, 0.94);
+  --ink: #f5f5f7;
+  --ink-soft: rgba(245, 245, 247, 0.78);
+  --muted: rgba(245, 245, 247, 0.5);
+  --label: #f5f5f7;
 
-  --surface: rgba(255, 255, 255, 0.08);
-  --surface-strong: rgba(255, 255, 255, 0.12);
-  --surface-soft: rgba(255, 255, 255, 0.06);
-  --surface-chip: rgba(255, 255, 255, 0.1);
-  --line: rgba(255, 255, 255, 0.16);
+  --surface: #1c1c1e;
+  --surface-soft: rgba(28, 28, 30, 0.85);
+  --surface-chip: rgba(255, 255, 255, 0.08);
+  --line: rgba(255, 255, 255, 0.12);
   --line-soft: rgba(255, 255, 255, 0.08);
 
-  --glass: rgba(18, 24, 42, 0.55);
-  --glass-border: rgba(255, 255, 255, 0.14);
-  --glass-edge: rgba(255, 255, 255, 0.35);
-  --glass-highlight: rgba(255, 255, 255, 0.18);
-  --glass-shadow: 0 16px 48px rgba(0, 0, 0, 0.35),
-    0 2px 8px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+  --glass: rgba(28, 28, 30, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-edge: rgba(255, 255, 255, 0.28);
+  --glass-highlight: rgba(255, 255, 255, 0.12);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 
   --btn-ghost-bg: rgba(255, 255, 255, 0.08);
-  --logo-plate: rgba(0, 0, 0, 0.55);
-  --mesh-a: rgba(255, 255, 255, 0.08);
-  --mesh-b: rgba(255, 255, 255, 0.05);
-  --blob-opacity: 0.28;
+  --panel-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+  --blob-opacity: 0.14;
 
   color-scheme: dark;
 }
 
 :root {
   --radius-pill: 999px;
-  --radius-xl: 32px;
-  --radius-lg: 24px;
-  --radius-md: 18px;
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
   --space: 20px;
-  --space-lg: 28px;
-  --max: 920px;
+  --space-lg: 64px;
+  --max: 860px;
+  --accent: var(--purple);
 
   --spring: cubic-bezier(0.22, 1, 0.36, 1);
-  --bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --bounce: cubic-bezier(0.34, 1.4, 0.64, 1);
   --font: 'Thmanyah Sans', 'SF Arabic', 'Segoe UI', Tahoma, sans-serif;
 
   color: var(--ink);
@@ -170,7 +151,7 @@ body {
   background: var(--bg);
   overflow-x: hidden;
   font-family: var(--font);
-  transition: background 0.35s ease, color 0.35s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 #root {
@@ -193,7 +174,7 @@ h2,
 h3,
 h4 {
   font-family: var(--font);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   margin: 0;
   font-weight: 700;
   color: var(--ink);
@@ -208,42 +189,24 @@ p {
   unicode-bidi: isolate;
 }
 
+/* Glass reserved for chrome (topbar) */
 .glass {
-  background:
-    linear-gradient(165deg, var(--surface-strong), var(--surface-soft) 45%, var(--surface)),
-    var(--glass);
-  backdrop-filter: blur(28px) saturate(170%);
-  -webkit-backdrop-filter: blur(28px) saturate(170%);
+  background: var(--glass);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   position: relative;
   overflow: hidden;
 }
 
-.glass::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  background: linear-gradient(
-    125deg,
-    var(--glass-highlight) 0%,
-    transparent 28%,
-    transparent 70%,
-    rgba(255, 255, 255, 0.08) 100%
-  );
-  opacity: 0.85;
-}
-
 .glass::after {
   content: '';
   position: absolute;
   top: 0;
-  left: 8%;
-  right: 8%;
+  left: 10%;
+  right: 10%;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--glass-edge), transparent);
   pointer-events: none;
-  opacity: 0.9;
 }

@@ -15,10 +15,10 @@ export default function SkillsPanel() {
 
       <motion.ul
         className="tech-logo-row"
-        initial={{ opacity: 0, y: 16 }}
+        initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.45 }}
       >
         {featuredTech.map((tech) => (
           <li key={tech.name} className="tech-logo-card">
@@ -27,8 +27,8 @@ export default function SkillsPanel() {
                 src={tech.logo}
                 alt="Apple Developer Academy at Tuwaiq"
                 className="academy-logo academy-logo--tech"
-                width={72}
-                height={28}
+                width={64}
+                height={24}
               />
             ) : (
               <TechIcon name={tech.name} className="tech-logo-card__icon" />
@@ -38,27 +38,20 @@ export default function SkillsPanel() {
         ))}
       </motion.ul>
 
-      <div className="skills__grid">
-        {skills.groups.map((group, i) => (
-          <motion.div
-            key={group.title}
-            className="skills__card"
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.35 }}
-            transition={{ delay: i * 0.08, duration: 0.5 }}
-          >
+      <div className="skills__groups">
+        {skills.groups.map((group) => (
+          <div key={group.title} className="skills__group">
             <h3>{group.title}</h3>
-            <ul className="chip-row chip-row--tech">
+            <ul className="chip-row">
               {group.items.map((item) => (
                 <TechChip key={item} label={item} />
               ))}
             </ul>
-          </motion.div>
+          </div>
         ))}
       </div>
 
-      <ul className="chip-row chip-row--soft skills__langs">
+      <ul className="chip-row skills__langs">
         {skills.languages.map((lang) => (
           <li key={lang.name}>
             {lang.name} · {lang.level}
