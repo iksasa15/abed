@@ -4,6 +4,8 @@ const content = {
     navWorks: 'أعمالي',
     navContact: 'تواصل',
     langBtn: 'EN',
+    themeDark: 'الوضع الليلي',
+    themeLight: 'الوضع النهاري',
     profile: {
       name: 'عبير اليعيش',
       nameEn: 'Abeer Al-Yaeesh',
@@ -185,6 +187,8 @@ const content = {
     navWorks: 'Work',
     navContact: 'Contact',
     langBtn: 'ع',
+    themeDark: 'Dark mode',
+    themeLight: 'Light mode',
     profile: {
       name: 'Abeer Al-Yaeesh',
       nameEn: 'عبير اليعيش',

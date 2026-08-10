@@ -7,10 +7,12 @@ import ProjectsPanel from './components/ProjectsPanel'
 import Reveal from './components/Reveal'
 import SkillsPanel from './components/SkillsPanel'
 import { useLanguage } from './LanguageContext'
+import { useTheme } from './ThemeContext'
 import './App.css'
 
 function App() {
   const { t, locale, toggleLocale } = useLanguage()
+  const { isDark, toggleTheme } = useTheme()
   const { scrollYProgress } = useScroll()
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 })
 
@@ -41,13 +43,26 @@ function App() {
         <div className="topbar__cluster">
           <button
             type="button"
+            className="glass-btn glass-btn--icon"
+            onClick={toggleTheme}
+            aria-label={isDark ? t.themeLight : t.themeDark}
+            title={isDark ? t.themeLight : t.themeDark}
+          >
+            {isDark ? '☀︎' : '☾'}
+          </button>
+          <button
+            type="button"
             className="glass-btn glass-btn--lang ltr"
             onClick={toggleLocale}
             aria-label={locale === 'ar' ? 'Switch to English' : 'التبديل للعربية'}
           >
             {t.langBtn}
           </button>
-          <button type="button" className="glass-btn" onClick={() => scrollTo('projects')}>
+          <button
+            type="button"
+            className="glass-btn nav-works"
+            onClick={() => scrollTo('projects')}
+          >
             {t.navWorks}
           </button>
           <a className="glass-btn glass-btn--tint" href="#contact">
