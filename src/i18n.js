@@ -30,7 +30,7 @@ const content = {
       { value: 'Senior', label: 'سنة التخرج' },
     ],
     heroCtaWorks: 'من أعمالي',
-    heroCtaHello: 'كلّمني',
+    heroCtaHello: 'خلينا نتواصل',
     about: {
       kicker: 'تعريف',
       title: 'نبذة عني',
@@ -233,7 +233,7 @@ const content = {
       { value: 'Senior', label: 'Graduation year' },
     ],
     heroCtaWorks: 'See my work',
-    heroCtaHello: 'Say hello',
+    heroCtaHello: "Let's talk",
     about: {
       kicker: 'About',
       title: 'About me',
