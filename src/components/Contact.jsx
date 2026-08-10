@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
-import { profile } from '../data'
+import { useLanguage } from '../LanguageContext'
 
 export default function Contact() {
+  const { t } = useLanguage()
+  const { profile, contact } = t
+
   return (
     <section className="contact" id="contact">
       <motion.div
@@ -12,13 +15,13 @@ export default function Contact() {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       >
         <header className="section-head section-head--center">
-          <p className="section-kicker">تواصل</p>
-          <h2 className="section-title">خلينا نشتغل سوا</h2>
+          <p className="section-kicker">{contact.kicker}</p>
+          <h2 className="section-title">{contact.title}</h2>
         </header>
-        <p>تقدرين تراسليني على الإيميل أو تتواصلين بالجوال.</p>
+        <p>{contact.text}</p>
         <div className="contact__actions">
           <a className="btn btn--primary" href={`mailto:${profile.email}`}>
-            الإيميل
+            {contact.emailBtn}
           </a>
           <a
             className="btn btn--ghost ltr"

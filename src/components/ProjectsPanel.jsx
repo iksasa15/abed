@@ -1,17 +1,20 @@
 import { motion } from 'framer-motion'
-import { projects } from '../data'
+import { useLanguage } from '../LanguageContext'
 import { TechChip } from './TechIcon'
 
 export default function ProjectsPanel() {
+  const { t } = useLanguage()
+  const { projects } = t
+
   return (
     <section className="panel projects section-block" id="projects">
       <header className="section-head">
-        <p className="section-kicker">أعمالي</p>
-        <h2 className="section-title">المشاريع</h2>
+        <p className="section-kicker">{projects.kicker}</p>
+        <h2 className="section-title">{projects.title}</h2>
       </header>
 
       <div className="projects__list">
-        {projects.map((project, i) => (
+        {projects.items.map((project, i) => (
           <motion.article
             key={project.id}
             className={`project project--${project.color}`}

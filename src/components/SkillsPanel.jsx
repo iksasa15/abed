@@ -1,13 +1,16 @@
 import { motion } from 'framer-motion'
-import { languages, skillGroups } from '../data'
+import { useLanguage } from '../LanguageContext'
 import TechIcon, { TechChip, featuredTech } from './TechIcon'
 
 export default function SkillsPanel() {
+  const { t } = useLanguage()
+  const { skills } = t
+
   return (
     <section className="panel skills section-block" id="skills">
       <header className="section-head">
-        <p className="section-kicker">الأدوات</p>
-        <h2 className="section-title">المهارات</h2>
+        <p className="section-kicker">{skills.kicker}</p>
+        <h2 className="section-title">{skills.title}</h2>
       </header>
 
       <motion.ul
@@ -19,14 +22,24 @@ export default function SkillsPanel() {
       >
         {featuredTech.map((tech) => (
           <li key={tech.name} className="tech-logo-card">
-            <TechIcon name={tech.name} className="tech-logo-card__icon" />
+            {tech.logo ? (
+              <img
+                src={tech.logo}
+                alt="Apple Developer Academy"
+                className="academy-logo academy-logo--tech"
+                width={36}
+                height={36}
+              />
+            ) : (
+              <TechIcon name={tech.name} className="tech-logo-card__icon" />
+            )}
             <span className="ltr">{tech.label}</span>
           </li>
         ))}
       </motion.ul>
 
       <div className="skills__grid">
-        {skillGroups.map((group, i) => (
+        {skills.groups.map((group, i) => (
           <motion.div
             key={group.title}
             className="skills__card"
@@ -46,7 +59,7 @@ export default function SkillsPanel() {
       </div>
 
       <ul className="chip-row chip-row--soft skills__langs">
-        {languages.map((lang) => (
+        {skills.languages.map((lang) => (
           <li key={lang.name}>
             {lang.name} · {lang.level}
           </li>

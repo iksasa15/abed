@@ -6,9 +6,11 @@ import Hero from './components/Hero'
 import ProjectsPanel from './components/ProjectsPanel'
 import Reveal from './components/Reveal'
 import SkillsPanel from './components/SkillsPanel'
+import { useLanguage } from './LanguageContext'
 import './App.css'
 
 function App() {
+  const { t, locale, toggleLocale } = useLanguage()
   const { scrollYProgress } = useScroll()
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 })
 
@@ -18,7 +20,11 @@ function App() {
 
   return (
     <div className="app">
-      <motion.div className="scroll-progress" style={{ scaleX: progress }} aria-hidden="true" />
+      <motion.div
+        className="scroll-progress"
+        style={{ scaleX: progress }}
+        aria-hidden="true"
+      />
 
       <div className="wallpaper" aria-hidden="true">
         <span className="blob blob--pink" />
@@ -30,14 +36,22 @@ function App() {
 
       <header className="topbar glass">
         <button type="button" className="topbar__brand" onClick={() => scrollTo('hero')}>
-          عبير
+          {t.brand}
         </button>
         <div className="topbar__cluster">
+          <button
+            type="button"
+            className="glass-btn glass-btn--lang ltr"
+            onClick={toggleLocale}
+            aria-label={locale === 'ar' ? 'Switch to English' : 'التبديل للعربية'}
+          >
+            {t.langBtn}
+          </button>
           <button type="button" className="glass-btn" onClick={() => scrollTo('projects')}>
-            أعمالي
+            {t.navWorks}
           </button>
           <a className="glass-btn glass-btn--tint" href="#contact">
-            تواصل
+            {t.navContact}
           </a>
         </div>
       </header>
@@ -69,7 +83,9 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>© {new Date().getFullYear()} عبير ف. اليعيش</p>
+        <p>
+          © {new Date().getFullYear()} {t.footer}
+        </p>
       </footer>
     </div>
   )

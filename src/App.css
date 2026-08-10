@@ -12,10 +12,14 @@
   left: 0;
   right: 0;
   height: 3px;
-  transform-origin: right center;
+  transform-origin: left center;
   z-index: 80;
   background: linear-gradient(90deg, var(--pink), var(--purple), var(--sky));
   pointer-events: none;
+}
+
+[dir='rtl'] .scroll-progress {
+  transform-origin: right center;
 }
 
 .reveal {
@@ -194,6 +198,12 @@
   transform: scale(0.94);
 }
 
+.glass-btn--lang {
+  min-width: 42px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
 .glass-btn--tint {
   background: linear-gradient(135deg, rgba(139, 108, 255, 0.85), rgba(94, 200, 242, 0.85));
   color: #fff;
@@ -349,6 +359,52 @@
   font-size: 0.78rem;
   color: var(--muted);
   font-weight: 500;
+}
+
+.hero__stat--logo {
+  gap: 8px;
+}
+
+.academy-logo {
+  display: block;
+  object-fit: contain;
+}
+
+.academy-logo--stat {
+  width: 100%;
+  max-width: 118px;
+  height: 36px;
+  margin-inline: auto;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: #0a0a0c;
+  box-shadow: 0 8px 20px rgba(10, 26, 51, 0.16);
+}
+
+.academy-logo--edu {
+  width: 72px;
+  height: 42px;
+  padding: 6px 8px;
+  border-radius: 12px;
+  background: #0a0a0c;
+  box-shadow: 0 8px 20px rgba(10, 26, 51, 0.16);
+  margin-top: 0;
+  object-fit: contain;
+}
+
+.academy-logo--tech {
+  width: 72px;
+  height: 28px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: #0a0a0c;
+  box-shadow: none;
+  object-fit: contain;
+}
+
+.edu__item--brand {
+  align-items: start;
+  grid-template-columns: 84px 1fr;
 }
 
 /* ——— Dive grid ——— */
@@ -1110,7 +1166,7 @@
     padding: 8px 8px 8px 14px;
   }
 
-  .topbar__cluster .glass-btn:first-child {
+  .topbar__cluster .glass-btn:nth-child(2) {
     display: none;
   }
 

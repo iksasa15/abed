@@ -40,23 +40,34 @@ const iconMap = {
 
   // AI / product
   AI: HiOutlineSparkles,
+  'Artificial Intelligence': HiOutlineSparkles,
   'الذكاء الاصطناعي': HiOutlineSparkles,
+  'Machine Learning': HiOutlineCpuChip,
   'تعلم الآلة': HiOutlineCpuChip,
   'Computer Vision': HiOutlineEye,
   'الرؤية الحاسوبية': HiOutlineEye,
 
   // Design
   'UX/UI': HiOutlinePaintBrush,
+  'UX/UI Design': HiOutlinePaintBrush,
   'تصميم UX/UI': HiOutlinePaintBrush,
   'Product Design': HiOutlineLightBulb,
+  'Design Systems': HiOutlinePaintBrush,
   'أنظمة التصميم': HiOutlinePaintBrush,
   'Design Thinking': HiOutlineLightBulb,
 
   // Soft / cloud
+  'Cloud Computing Basics': HiOutlineCloud,
   'أساسيات الحوسبة السحابية': HiOutlineCloud,
+  'Backend & APIs': SiOpenapiinitiative,
+  'Swift & SwiftUI': SiSwift,
+  'Problem Solving': HiOutlineLightBulb,
   'حل المشكلات': HiOutlineLightBulb,
+  Communication: HiOutlineChatBubbleLeftRight,
   التواصل: HiOutlineChatBubbleLeftRight,
+  Leadership: HiOutlineAcademicCap,
   القيادة: HiOutlineAcademicCap,
+  Teamwork: HiOutlineUserGroup,
   'العمل الجماعي': HiOutlineUserGroup,
 }
 
@@ -110,5 +121,9 @@ export const featuredTech = [
   { label: 'Figma', name: 'Figma' },
   { label: 'AI', name: 'AI' },
   { label: 'UX/UI', name: 'UX/UI' },
-  { label: 'Apple', name: 'Apple' },
+  {
+    label: 'Academy',
+    name: 'Apple Academy',
+    logo: '/logos/apple-academy.png',
+  },
 ]

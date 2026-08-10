@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion'
-import { profile, stats } from '../data'
+import { useLanguage } from '../LanguageContext'
 
 export default function Hero({ onExplore }) {
+  const { t } = useLanguage()
+  const { profile, stats } = t
+
   return (
     <section className="hero">
       <motion.div
@@ -17,17 +20,27 @@ export default function Hero({ onExplore }) {
 
         <div className="hero__actions">
           <button type="button" className="btn btn--primary" onClick={onExplore}>
-            من أعمالي
+            {t.heroCtaWorks}
           </button>
           <a className="btn btn--ghost" href={`mailto:${profile.email}`}>
-            كلّمني
+            {t.heroCtaHello}
           </a>
         </div>
 
         <ul className="hero__stats">
           {stats.map((stat) => (
-            <li key={stat.label}>
-              <strong className="ltr">{stat.value}</strong>
+            <li key={stat.label} className={stat.logo ? 'hero__stat--logo' : ''}>
+              {stat.logo ? (
+                <img
+                  src={stat.logo}
+                  alt="Apple Developer Academy"
+                  className="academy-logo academy-logo--stat"
+                  width={44}
+                  height={44}
+                />
+              ) : (
+                <strong className="ltr">{stat.value}</strong>
+              )}
               <span>{stat.label}</span>
             </li>
           ))}
