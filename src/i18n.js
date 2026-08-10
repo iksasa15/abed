@@ -36,76 +36,93 @@ const content = {
       title: 'نبذة عني',
     },
     education: {
-      kicker: 'المسار',
-      title: 'التعليم والخبرات',
+      kicker: 'المسار الزمني',
+      title: 'التعليم والشهادات',
       activitiesTitle: 'التطوع والأنشطة',
       items: [
         {
+          year: '2026',
+          title: 'برنامج McKinsey.org Forward',
+          org: 'McKinsey.org',
+          meta: '2026',
+          accent: 'navy',
+          points: [
+            'برنامج تطوير مهارات حل المشكلات والتفكير التحليلي للعمل في بيئات احترافية.',
+          ],
+        },
+        {
+          year: 'الآن',
           title: 'بكالوريوس علوم الحاسب',
           org: 'الجامعة العربية المفتوحة',
           meta: 'السنة الأخيرة · حالياً',
+          accent: 'purple',
           points: [
             'أبني أساس علوم الحاسب من البرمجة وقواعد البيانات إلى تصميم الأنظمة والمنتجات.',
             'أربط الدراسة بمشاريع عملية من الفكرة حتى التسليم مع فرق متعددة التخصصات.',
           ],
         },
         {
-          title: 'برنامج McKinsey.org Forward',
-          org: 'McKinsey.org',
-          meta: '2026',
-          points: [
-            'برنامج تطوير مهارات حل المشكلات والتفكير التحليلي للعمل في بيئات احترافية.',
-          ],
-        },
-        {
+          year: '2023',
           title: 'برنامج مطوري Apple',
           org: 'أكاديمية Apple في طويق',
           meta: '2023 – 2024',
           logo: '/logos/apple-academy.png',
+          accent: 'sky',
           points: [
             'تعلّمت تطوير تطبيقات iOS باستخدام Swift و SwiftUI بتركيز على تجربة المستخدم.',
             'ساهمت في بناء Decision Dive كتطبيق تفاعلي لاكتشاف الذات.',
           ],
         },
         {
+          year: '2022',
           title: 'شهادة تصميم UX/UI',
           org: 'أكاديمية طويق',
           meta: '2022',
+          accent: 'pink',
           points: [
             'أسس تصميم الواجهات، تدفقات المستخدم، وبناء أنظمة تصميم واضحة.',
           ],
         },
         {
+          year: '2022',
           title: 'تدريب الأمن السيبراني والبرمجة',
           org: 'الاتحاد السعودي · طويق',
           meta: '2022',
+          accent: 'navy',
           points: [
             'تعرّفت على أساسيات الأمن السيبراني والبرمجة ضمن بيئة تدريب عملية.',
           ],
         },
         {
+          year: '2021',
           title: 'شهادة Hour of Code',
           org: 'Code.org',
           meta: '2021',
+          accent: 'sky',
         },
         {
+          year: '2020',
           title: 'TOT — تدريب المدربين',
           org: 'شهادة',
           meta: '2020',
+          accent: 'purple',
         },
       ],
       activities: [
         {
+          year: '2024',
           title: 'عضوة نادي الحاسب',
           org: 'الجامعة العربية المفتوحة',
           meta: '2024 – 2025',
         },
         {
+          year: '2024',
           title: 'وحدة العلاقات العامة',
           org: 'نادي الحاسب · الجامعة',
           meta: '2024',
         },
         {
+          year: '2022',
           title: 'قائدة طلابية',
           org: 'الجامعة العربية المفتوحة',
           meta: '2022',
@@ -139,11 +156,12 @@ const content = {
       ],
     },
     projects: {
-      kicker: 'أعمالي',
+      kicker: 'التسلسل الزمني',
       title: 'المشاريع',
       items: [
         {
           id: 'zomoroda',
+          year: '2026',
           name: 'ZOMORODA',
           status: 'قيد التطوير',
           tagline: 'مساعد جمال زهري مدعوم بالذكاء الاصطناعي',
@@ -154,6 +172,7 @@ const content = {
         },
         {
           id: 'tracker',
+          year: '2026',
           name: 'AOU Study Tracker',
           status: 'مشروع التخرج · 2026',
           tagline: 'مساعد تعلم بالذكاء الاصطناعي',
@@ -164,6 +183,7 @@ const content = {
         },
         {
           id: 'dive',
+          year: '2024',
           name: 'Decision Dive',
           status: '2024',
           tagline: 'تطبيق لاكتشاف الذات',
@@ -219,76 +239,93 @@ const content = {
       title: 'About me',
     },
     education: {
-      kicker: 'Path',
-      title: 'Education & experience',
+      kicker: 'Timeline',
+      title: 'Education & certificates',
       activitiesTitle: 'Volunteering & activities',
       items: [
         {
+          year: '2026',
+          title: 'McKinsey.org Forward Program',
+          org: 'McKinsey.org',
+          meta: '2026',
+          accent: 'navy',
+          points: [
+            'Problem-solving and analytical thinking for professional environments.',
+          ],
+        },
+        {
+          year: 'Now',
           title: 'B.Sc. Computer Science',
           org: 'Arab Open University',
           meta: 'Senior year · Current',
+          accent: 'purple',
           points: [
             'Building a CS foundation from programming and databases to systems and product design.',
             'Connecting coursework to practical projects with multidisciplinary teams.',
           ],
         },
         {
-          title: 'McKinsey.org Forward Program',
-          org: 'McKinsey.org',
-          meta: '2026',
-          points: [
-            'Problem-solving and analytical thinking for professional environments.',
-          ],
-        },
-        {
+          year: '2023',
           title: 'Apple Developer Program',
           org: 'Apple Academy at TUWAIQ',
           meta: '2023 – 2024',
           logo: '/logos/apple-academy.png',
+          accent: 'sky',
           points: [
             'Built iOS apps with Swift and SwiftUI with a strong UX focus.',
             'Contributed to Decision Dive, an interactive self-discovery app.',
           ],
         },
         {
+          year: '2022',
           title: 'UX/UI Design Certificate',
           org: 'TUWAIQ Academy',
           meta: '2022',
+          accent: 'pink',
           points: [
             'Interface design fundamentals, user flows, and clear design systems.',
           ],
         },
         {
+          year: '2022',
           title: 'Cybersecurity & Programming Internship',
           org: 'Saudi Federation · TUWAIQ',
           meta: '2022',
+          accent: 'navy',
           points: [
             'Hands-on introduction to cybersecurity and programming fundamentals.',
           ],
         },
         {
+          year: '2021',
           title: 'Hour of Code Certificate',
           org: 'Code.org',
           meta: '2021',
+          accent: 'sky',
         },
         {
+          year: '2020',
           title: 'TOT — Training of Trainers',
           org: 'Certificate',
           meta: '2020',
+          accent: 'purple',
         },
       ],
       activities: [
         {
+          year: '2024',
           title: 'Computer Club Member',
           org: 'Arab Open University',
           meta: '2024 – 2025',
         },
         {
+          year: '2024',
           title: 'Public Relations Unit',
           org: 'Computer Club · AOU',
           meta: '2024',
         },
         {
+          year: '2022',
           title: 'Student Leader',
           org: 'Arab Open University',
           meta: '2022',
@@ -322,11 +359,12 @@ const content = {
       ],
     },
     projects: {
-      kicker: 'Work',
+      kicker: 'Timeline',
       title: 'Projects',
       items: [
         {
           id: 'zomoroda',
+          year: '2026',
           name: 'ZOMORODA',
           status: 'In progress',
           tagline: 'AI-powered floral beauty assistant',
@@ -337,6 +375,7 @@ const content = {
         },
         {
           id: 'tracker',
+          year: '2026',
           name: 'AOU Study Tracker',
           status: 'Graduation project · 2026',
           tagline: 'AI learning assistant',
@@ -347,6 +386,7 @@ const content = {
         },
         {
           id: 'dive',
+          year: '2024',
           name: 'Decision Dive',
           status: '2024',
           tagline: 'Self-discovery application',

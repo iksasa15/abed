@@ -85,11 +85,11 @@ function App() {
         </Reveal>
 
         <Reveal delay={0.04}>
-          <SkillsPanel />
+          <ProjectsPanel />
         </Reveal>
 
         <Reveal delay={0.04}>
-          <ProjectsPanel />
+          <SkillsPanel />
         </Reveal>
 
         <Reveal>

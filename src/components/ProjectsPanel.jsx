@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
 import { useLanguage } from '../LanguageContext'
 import { TechChip } from './TechIcon'
+import Timeline, { TimelineItem } from './Timeline'
 
 export default function ProjectsPanel() {
   const { t } = useLanguage()
@@ -13,35 +13,28 @@ export default function ProjectsPanel() {
         <h2 className="section-title">{projects.title}</h2>
       </header>
 
-      <div className="projects__list">
+      <Timeline>
         {projects.items.map((project, i) => (
-          <motion.article
+          <TimelineItem
             key={project.id}
-            className={`project project--${project.color}`}
-            initial={{ opacity: 0, y: 36 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{
-              delay: i * 0.1,
-              type: 'spring',
-              stiffness: 240,
-              damping: 22,
-            }}
+            year={project.year}
+            accent={project.color}
+            delay={Math.min(i * 0.08, 0.3)}
           >
-            <div className="project__meta">
+            <div className={`project project--flat project--${project.color}`}>
               <span className="project__status">{project.status}</span>
+              <h3 className="project__name ltr">{project.name}</h3>
+              <p className="project__tagline">{project.tagline}</p>
+              <p className="project__desc">{project.description}</p>
+              <ul className="project__skills">
+                {project.skills.map((skill) => (
+                  <TechChip key={skill} label={skill} className="ltr" />
+                ))}
+              </ul>
             </div>
-            <h3 className="project__name ltr">{project.name}</h3>
-            <p className="project__tagline">{project.tagline}</p>
-            <p className="project__desc">{project.description}</p>
-            <ul className="project__skills">
-              {project.skills.map((skill) => (
-                <TechChip key={skill} label={skill} className="ltr" />
-              ))}
-            </ul>
-          </motion.article>
+          </TimelineItem>
         ))}
-      </div>
+      </Timeline>
     </section>
   )
 }

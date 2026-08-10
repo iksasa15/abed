@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
 import { useLanguage } from '../LanguageContext'
+import Timeline, { TimelineItem } from './Timeline'
 
 export default function EducationPanel() {
   const { t } = useLanguage()
@@ -12,55 +12,46 @@ export default function EducationPanel() {
         <h2 className="section-title">{education.title}</h2>
       </header>
 
-      <ul className="edu__list">
+      <Timeline>
         {education.items.map((item, i) => (
-          <motion.li
+          <TimelineItem
             key={item.title}
-            className={`edu__item ${item.logo ? 'edu__item--brand' : ''}`}
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ delay: Math.min(i * 0.05, 0.3), duration: 0.45 }}
+            year={item.year}
+            logo={item.logo}
+            accent={item.accent || (i % 2 === 0 ? 'purple' : 'sky')}
+            delay={Math.min(i * 0.05, 0.28)}
           >
-            {item.logo ? (
-              <img
-                src={item.logo}
-                alt="Apple Developer Academy at Tuwaiq"
-                className="academy-logo academy-logo--edu"
-                width={72}
-                height={42}
-              />
-            ) : (
-              <div className="edu__dot" aria-hidden="true" />
-            )}
-            <div>
-              <p className="edu__meta">{item.meta}</p>
-              <h3>{item.title}</h3>
-              <p className="edu__org">{item.org}</p>
-              {item.points?.length ? (
-                <ul className="edu__points">
-                  {item.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
-              ) : null}
-            </div>
-          </motion.li>
+            <p className="timeline__meta">{item.meta}</p>
+            <h3 className="timeline__title">{item.title}</h3>
+            <p className="timeline__org">{item.org}</p>
+            {item.points?.length ? (
+              <ul className="timeline__points">
+                {item.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            ) : null}
+          </TimelineItem>
         ))}
-      </ul>
+      </Timeline>
 
       <div className="edu__activities">
         <h3 className="edu__activities-title">{education.activitiesTitle}</h3>
-        <ul className="about__acts">
-          {education.activities.map((act) => (
-            <li key={act.title}>
-              <strong>{act.title}</strong>
-              <span>
+        <Timeline className="timeline--compact">
+          {education.activities.map((act, i) => (
+            <TimelineItem
+              key={act.title}
+              year={act.year}
+              accent="pink"
+              delay={Math.min(i * 0.05, 0.2)}
+            >
+              <h3 className="timeline__title">{act.title}</h3>
+              <p className="timeline__org">
                 {act.org} · {act.meta}
-              </span>
-            </li>
+              </p>
+            </TimelineItem>
           ))}
-        </ul>
+        </Timeline>
       </div>
     </section>
   )
