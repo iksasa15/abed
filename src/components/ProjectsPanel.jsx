@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { projects } from '../data'
+import { TechChip } from './TechIcon'
 
 export default function ProjectsPanel() {
   return (
@@ -32,9 +33,7 @@ export default function ProjectsPanel() {
             <p className="project__desc">{project.description}</p>
             <ul className="project__skills">
               {project.skills.map((skill) => (
-                <li key={skill} className="ltr">
-                  {skill}
-                </li>
+                <TechChip key={skill} label={skill} className="ltr" />
               ))}
             </ul>
           </motion.article>
