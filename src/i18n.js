@@ -196,7 +196,7 @@ const content = {
     },
     contact: {
       kicker: 'تواصل',
-      title: 'خلينا نشتغل سوا',
+      title: 'خلينا نتواصل',
       text: 'تقدرين تراسليني على الإيميل أو تتواصلين بالجوال.',
       emailBtn: 'الإيميل',
     },
@@ -399,7 +399,7 @@ const content = {
     },
     contact: {
       kicker: 'Contact',
-      title: 'Let’s build together',
+      title: "Let's talk",
       text: 'Reach me by email or phone.',
       emailBtn: 'Email',
     },
